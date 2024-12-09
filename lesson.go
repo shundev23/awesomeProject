@@ -8,13 +8,26 @@ import "fmt"
 	fmt.Println("Init")
 }
 */
+var (
+	i    int     = 1
+	f64  float64 = 1.2
+	s    string  = "test"
+	t, f bool    = true, false
+)
 
-// Goのエントリポイントはmainに限定されるため、mainで呼び出す必要あり
-func bazz() {
-	fmt.Println("Bazz")
+func foo() {
+	// ショートは関数内でしか定義できない
+	xi := 1
+	xi = 2
+	var xf32 float32 = 1.2
+	xs := "test"
+	xt, xf := true, false
+	fmt.Println(xi, xf32, xs, xt, xf)
+	fmt.Printf("%T\n", xf32)
+	fmt.Printf("%T\n", xi)
 }
 
 func main() {
-	// bazz()
-	fmt.Println("Hello World", "test test")
+	fmt.Println(i, f64, s, t, f)
+	foo()
 }
