@@ -29,9 +29,11 @@ func main() {
 	// m3["pc"] = 5000
 	// fmt.Println(m3)
 
-	var s []int
+	s := []int{}
 	if s == nil {
 		fmt.Println("slice is nil")
+	} else {
+		fmt.Println("slice is not nil")
 	}
 
 	// マップからキー"apple"の値を取得
