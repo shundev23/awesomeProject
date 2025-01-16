@@ -4,6 +4,16 @@ import "fmt"
 
 func main() {
 	m := map[string]int{"apple": 100, "banana": 200}
+
+	// デバッグ情報を追加
+	fmt.Printf("Map type: %T\n", m)
+	fmt.Printf("Map length: %d\n", len(m))
+
+	// マップの各要素をループで確認
+	for key, value := range m {
+		fmt.Printf("Key: %s, Value: %d\n", key, value)
+	}
+
 	fmt.Println(m)
 	fmt.Println(m["apple"])
 	m["banana"] = 300
